@@ -9,14 +9,20 @@
 </head>
 <body>
 
+    <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <header>
+        <h1 class="name">Mohith G G</h1> 
+        
         <div class="about-tag">About Me</div>
         <p class="intro-text">
-            First-semester Engineering student studying at PES University based in Bengaluru. 
-            Passionate about Python, machine learning, and building clean software.
+            Second-semester Engineering student based in Bengaluru. 
+            Passionate about Python, automation, and building clean software.
         </p>
         
-        <h1 class="name">Mohith G G</h1> <div class="social-links">
+        <div class="social-links">
             <a href="https://github.com/mohith2025" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/mohithgg" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
@@ -24,23 +30,27 @@
 
     <main>
         <h2 class="section-title">Featured Projects</h2>
-        
         <div class="projects-grid">
             <div class="project-card">
                 <h3>Iris Flower Classification</h3>
-                <p>eveloped a Python-based ML model to classify Iris species using scikit-learn, with preprocessing, training, and prediction workflows.</p>
-                <a href="https://github.com/mohith2025/Iris_Flower_Classification_25" class="project-link" target="_blank">
-                    <i class="fab fa-github"></i> View Code
-                </a>
+                <p>Developed a Python-based ML model to classify Iris species using scikit-learn, with preprocessing, training, and prediction workflows.</p>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
             </div>
 
-            
-        </div>
     </main>
 
     <footer>
         <p>© 2026 | Built with Python spirit & CSS</p>
     </footer>
 
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const icon = btn.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+    </script>
 </body>
 </html>
